@@ -1,0 +1,14 @@
+[Unit]
+Description=PythonAutenticator
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3
+user=SEL
+Restart=no
+StandardOutput=tty
+StandardError=tty
+TTYPath=/dev/tty1
+
+[Install]
+WantedBy=multi-user.target

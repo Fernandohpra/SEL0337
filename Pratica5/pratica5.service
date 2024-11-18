@@ -1,0 +1,14 @@
+[Unit]
+Description=RFIDAuthenticationService
+After=multi-user.target
+
+[Service]
+ExecStart=/bin/bash -c 'cd /home/sel && source 0871/bin/activate && python pratica5.py'
+user=SEL
+Restart=no
+StandardOutput=tty
+StandardError=tty
+TTYPath=/dev/tty1
+
+[Install]
+WantedBy=multi-user.target

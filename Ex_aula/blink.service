@@ -1,0 +1,8 @@
+[Unit]
+Description= Blink LED
+After=multi-user.target
+[Service]
+ExecStart=/home/sel/0871/Ex_aula/blink.sh
+user=SEL
+[Install]
+WantedBy=multi-user.target
