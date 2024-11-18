@@ -18,6 +18,7 @@ def autenticador_rfid():
                 if id == 497386497680:
                     print("Acesso liberado.")
                     led.color = Color('green')
+                    sleep(3)
                     return 0
                 else:
                     print("Acesso Negado. Tente novamente.")
