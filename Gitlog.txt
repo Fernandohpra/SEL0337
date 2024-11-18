@@ -1,0 +1,23 @@
+commit ea14503efb11ecbf0242a602eabfb26006d4ce86
+Author: Fernandohpra <ferhpra@gmail.com>
+Date:   Mon Nov 18 18:40:27 2024 +0000
+
+    Adicionado delay para que o led se mantenha aceso
+
+commit 85fd1a3e92c6988007be36e91792967c74e589df
+Author: Fernandohpra <ferhpra@gmail.com>
+Date:   Mon Nov 18 18:18:05 2024 +0000
+
+    Adicionando arquivos
+
+commit 9c0be2f5b60a24ad950f258fe8491a1d3375a33d
+Author: MatiasCaccalano <matias.caccalano@usp.br>
+Date:   Mon Nov 18 18:13:16 2024 +0000
+
+    Add pratica4 pt 2
+
+commit 318c028398217d460e58991fe4891aeb54a0b44c
+Author: Fernandohpra <ferhpra@gmail.com>
+Date:   Mon Nov 18 14:53:45 2024 -0300
+
+    Initial commit
