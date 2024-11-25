@@ -24,5 +24,6 @@ De forma geral é um código que faria parte de um sistema maior, como um aplica
 <img src="autenticador.png" alt="Código do autenticador">
 O programa contantemente aguarda a leitura de um tag RFID, indicado pelo LED aceso com cor amerela, após a leitura de uma tag é verificado se o ID da tag corresponde ao ID estabelecido no código. Caso a tag seja autorizada o programa aciona o LED com a luz verde e retorna 0, caso contrário o LED é acionado com luz vermelha e o programa volta para o loop principal após 3 segundos.
 Por segurança, pois trata-se algo relacionado a inicialização do sistema, foi adicionado uma interrupção pelo teclado a fim de evitar qualquer tipo de erro não esperado na inicialização devido ao autenticador.
+
 <img src="finalprat5.png" alt="Parte final do código">
 Por fim garante-se que o código só funcionará quando executador diretamente, parte vestigial do código feita para testar as funcionalidades do systemD que foi mantida por não afetar o funcionamento do código.
