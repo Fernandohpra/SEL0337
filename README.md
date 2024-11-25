@@ -27,3 +27,6 @@ Por segurança, pois trata-se algo relacionado a inicialização do sistema, foi
 
 <img src="finalprat5.png" alt="Parte final do código">
 Por fim garante-se que o código só funcionará quando executador diretamente, parte vestigial do código feita para testar as funcionalidades do systemD que foi mantida por não afetar o funcionamento do código.
+
+<img src="service.png" alt="Service">
+O .service feito para essa prática é bem simples e segue o padrão dos exemplos de aula, para utilizações práticas adionaria-se um ExecStop para executar o programa desejado após a autenticação.
