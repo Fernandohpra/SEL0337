@@ -30,3 +30,4 @@ Por fim garante-se que o código só funcionará quando executador diretamente, 
 
 <img src="service.png" alt="Service">
 O .service feito para essa prática é bem simples e segue o padrão dos exemplos de aula, para utilizações práticas adionaria-se um ExecStop para executar o programa desejado após a autenticação.
+Por motivos ainda não esclarecidos o programa não funciona na raspberry PI com o endereço do resposítorio, forçando que o código fosse colocado em /home/sel/ como indicado pelo .service.
