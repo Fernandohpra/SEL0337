@@ -63,6 +63,8 @@ Para reproduzir os resultados no mesmo laboratório sugere-se procurar pela Pica
 <img src="Imgs/PicamSD.jpg" alt="Caixa com Camera e SD">
 
 ### 🚀 Funcionamento
+O sistema foi feito para que a ESP32 controle o acionamento de um sistema de reconhecimento de objetos, utilizando uma placa Raspberry Pi como servidor para capturar e processar a imagem, um sensor de luminosidade indica se há condições luminosas suficientes para o funcionamento correto do sistema. Por fim um displey OLED indicará se a luminosidade está dentro dos requisitos e mostrará o resultado da classificação de imagem acionada.
+
 Os códigos em python que rodam na raspberry pi são relativamente simples, temos o scrip tesponsável pela captura da imagem utilizando a biblioteca picamera2:
 <img src="Imgs/camera.png" alt="Camera">
 Outro código é responsável por aplicar o algoritmo de classificação YOLO, com diversas versões disponíveis para melhor precisão ou maior velocidade:
