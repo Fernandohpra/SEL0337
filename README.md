@@ -76,7 +76,7 @@ Para a placa ESP32 o script feito possui 2 tasks utilizando o freeRTOS, com cada
 <img src="Imgs/cores.png" alt="Núcleos">
 A primeira task cuida da leitura do ADC que monitora a luminosidade do ambiente via um LDR e apresenta o resultado no display:
 <img src="Imgs/taskLDR.png" alt="LDR">
-Por fim temos a task responsável pelo acionamento via botão touch e transmissão/recepção dos dados via UART, enviando a flag de acionamento para a raspberry pi e aguardando o resultado da classificação, imprimindo o resultado no display:
+Por fim temos a task responsável pelo acionamento via botão touch e transmissão/recepção dos dados via UART, enviando a flag de acionamento para a raspberry pi e aguardando o resultado da classificação.
 <img src="Imgs/TouchUART.png" alt="Touch UART">
 [Sistema em funcionamento (https://youtu.be/TTqWvQ29oNY):](https://youtu.be/TTqWvQ29oNY)
 
