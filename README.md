@@ -39,6 +39,7 @@ Por motivos ainda não esclarecidos o programa não funciona na raspberry PI com
 ## Prática Final
 ### 💻 Dependências
 Bibliotecas:
+
 Python:
 - [ ] RPi.GPIO
 - [ ] gpiozero
