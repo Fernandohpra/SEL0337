@@ -16,6 +16,10 @@ Bibliotecas:
 - [x] time
 - [x] mfrc522
 - [x] colorzero
+- [ ] serial
+- [ ] ultralytics
+- [ ] cv2
+- [ ] picamera2
 <img src="dependências e saídas.png" alt="Dependências e pinos de saída do código">
 
 ### 🚀 Funcionamento
@@ -31,3 +35,48 @@ Por fim garante-se que o código só funcionará quando executador diretamente, 
 <img src="service.png" alt="Service">
 O .service feito para essa prática é bem simples e segue o padrão dos exemplos de aula, para utilizações práticas adionaria-se um ExecStop para executar o programa desejado após a autenticação.
 Por motivos ainda não esclarecidos o programa não funciona na raspberry PI com o endereço do resposítorio, forçando que o código fosse colocado em /home/sel/ como indicado pelo .service.
+
+## Prática Final
+### 💻 Dependências
+Bibliotecas:
+Python:
+- [ ] RPi.GPIO
+- [ ] gpiozero
+- [x] time
+- [ ] mfrc522
+- [ ] colorzero
+- [x] serial
+- [x] ultralytics
+- [x] cv2
+- [x] picamera2
+
+C++ (Arduino IDE):
+- [x] Wire
+- [x] Adafruit_SSD1306
+- [x] Adafruit_GFX
+### 🔧 Montagem
+<img src="Imgs/Display.jpg" alt="Display OLED">
+<img src="Imgs/LDR.jpg" alt="LDR">
+<img src="Imgs/Montado.jpg" alt="Sistema montado">
+
+Para reproduzir os resultados no mesmo laboratório sugere-se procurar pela Picamera com a marcação indicada na figura abaixo, dentro da caixa estará uma Picamera funcional e um adaptador USP com um cartão SD bootable na raspberry pi que foi utilizado nos meus testes.
+<img src="Imgs/PicamSD.jpg" alt="Caixa com Camera e SD">
+
+### 🚀 Funcionamento
+Os códigos em python que rodam na raspberry pi são relativamente simples, temos o scrip tesponsável pela captura da imagem utilizando a biblioteca picamera2:
+<img src="Imgs/camera.png" alt="Camera">
+Outro código é responsável por aplicar o algoritmo de classificação YOLO, com diversas versões disponíveis para melhor precisão ou maior velocidade:
+<img src="Imgs/yolo.png" alt="YOLO">
+Por fim o código que de fato é executado durante o funcionamento do sistema, que espera a flag da ESP32 recebia via UART, chama o script de camera seguido do de classificação para por fim enviar os resultados da classificação via UART de volta para a ESP32:
+<img src="Imgs/rasp.png" alt="YOLO">
+
+Para a placa ESP32 o script feito possui 2 tasks utilizando o freeRTOS, com cada uma fixa em um núcleo diferente.
+<img src="Imgs/cores.png" alt="Núcleos">
+A primeira task cuida da leitura do ADC que monitora a luminosidade do ambiente via um LDR e apresenta o resultado no display:
+<img src="Imgs/taskLDR.png" alt="LDR">
+Por fim temos a task responsável pelo acionamento via botão touch e transmissão/recepção dos dados via UART, enviando a flag de acionamento para a raspberry pi e aguardando o resultado da classificação, imprimindo o resultado no display:
+<img src="Imgs/TouchUART.png" alt="Touch UART">
+[Sistema em funcionamento (https://youtu.be/TTqWvQ29oNY):](https://youtu.be/TTqWvQ29oNY)
+
+
+[![YouTube](http://i.ytimg.com/vi/TTqWvQ29oNY/hqdefault.jpg)](https://www.youtube.com/watch?v=TTqWvQ29oNY)
