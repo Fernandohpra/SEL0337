@@ -66,11 +66,11 @@ Para reproduzir os resultados no mesmo laboratório sugere-se procurar pela Pica
 ### 🚀 Funcionamento
 O sistema foi feito para que a ESP32 controle o acionamento de um sistema de reconhecimento de objetos, utilizando uma placa Raspberry Pi como servidor para capturar e processar a imagem, um sensor de luminosidade indica se há condições luminosas suficientes para o funcionamento correto do sistema. Por fim um displey OLED indicará se a luminosidade está dentro dos requisitos e mostrará o resultado da classificação de imagem acionada.
 
-Os códigos em python que rodam na raspberry pi são relativamente simples, temos o scrip tesponsável pela captura da imagem utilizando a biblioteca picamera2:
+Os códigos em python que rodam na raspberry pi são relativamente simples, temos o script tesponsável pela captura da imagem utilizando a biblioteca picamera2:
 <img src="Imgs/camera.png" alt="Camera">
 Outro código é responsável por aplicar o algoritmo de classificação YOLO, com diversas versões disponíveis para melhor precisão ou maior velocidade:
 <img src="Imgs/yolo.png" alt="YOLO">
-Por fim o código que de fato é executado durante o funcionamento do sistema, que espera a flag da ESP32 recebia via UART, chama o script de camera seguido do de classificação para por fim enviar os resultados da classificação via UART de volta para a ESP32:
+Por fim o código que de fato é executado durante o funcionamento do sistema, que espera a flag da ESP32 recebida via UART, chama o script de camera seguido do de classificação para por fim enviar os resultados da classificação via UART de volta para a ESP32:
 <img src="Imgs/rasp.png" alt="YOLO">
 
 Para a placa ESP32 o script feito possui 2 tasks utilizando o freeRTOS, com cada uma fixa em um núcleo diferente.
