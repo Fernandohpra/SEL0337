@@ -60,7 +60,7 @@ C++ (Arduino IDE):
 <img src="Imgs/LDR.jpg" alt="LDR">
 <img src="Imgs/Montado.jpg" alt="Sistema montado">
 
-Para reproduzir os resultados no mesmo laboratório sugere-se procurar pela Picamera com a marcação indicada na figura abaixo, dentro da caixa estará uma Picamera funcional e um adaptador USP com um cartão SD bootable na raspberry pi que foi utilizado nos meus testes.
+Para reproduzir os resultados no mesmo laboratório sugere-se procurar pela Picamera com a marcação indicada na figura abaixo, dentro da caixa estará uma Picamera funcional e um adaptador USB com um cartão SD bootable na raspberry pi que foi utilizado nos meus testes.
 <img src="Imgs/PicamSD.jpg" alt="Caixa com Camera e SD">
 
 ### 🚀 Funcionamento
